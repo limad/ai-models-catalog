@@ -32,6 +32,8 @@ NAME_DENY = re.compile(
     re.I,
 )
 # Snapshot daté ou numéroté en fin d'id : -20251101, -2024-11-20, -2603.
+# Un prix dans un libellé devient faux dès que le tarif change : le prix vit dans « cost ».
+PRICE_IN_LABEL_RE = re.compile(r"\d[\d.,]*\s*(?:/\s*[\d.,]+\s*)?\$")
 SNAPSHOT_RE = re.compile(r"^(?P<base>.+?)-(?:\d{8}|\d{4}-\d{2}-\d{2}|\d{4})$")
 INPUT_KINDS = {"text", "image", "pdf", "audio", "video"}
 PATCHABLE = {"name", "label", "family", "release_date", "status", "context", "output", "input",
@@ -221,9 +223,12 @@ def validate(catalog):
         dm = p.get("default_model")
         if dm and dm not in p["models"]:
             errors.append(f"{pid} : default_model « {dm} » absent de la liste")
-        for mid in p["models"]:
+        for mid, m in p["models"].items():
             if not ID_RE.match(mid):
                 errors.append(f"{pid} : id invalide {mid!r}")
+            for field in ("label", "name"):
+                if PRICE_IN_LABEL_RE.search(str(m.get(field, ""))):
+                    errors.append(f"{pid}/{mid} : prix dans « {field} » ({m[field]!r}), à mettre dans cost")
     return errors
 
 

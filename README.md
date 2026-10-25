@@ -18,8 +18,10 @@ Filtres (dans l'ordre) :
 1. fournisseurs listés dans `config/providers.json` seulement ;
 2. exclusion des modèles hors chat (embeddings, image, vidéo, audio, transcription, temps réel), obsolètes, sans appel d'outils, ou spécialisés (deep-research, computer-use, guard…) ;
 3. suppression des snapshots datés quand l'alias existe, et des alias `-latest` qui doublonnent une version ;
-4. par famille, les 2 dates de sortie les plus récentes, et rien de plus vieux que 18 mois ;
+4. par famille, les 2 dates de sortie les plus récentes (1 pour OpenRouter, réglable par fournisseur avec `per_family`), et rien de plus vieux que 18 mois ;
 5. corrections manuelles de `config/overrides.json` : `pin` (toujours gardé, marqué `recommended`), `exclude`, libellés, ajouts de modèles absents de models.dev.
+
+**Libellés sans prix :** un prix dans `label` ou `name` fait échouer la génération ; le prix vit dans `cost`.
 
 **Garde-fou :** si un fournisseur se retrouve vide, si son `default_model` disparaît, ou si plus de 30 % des modèles disparaissent d'un coup, l'Action échoue et rien n'est publié.
 

@@ -74,16 +74,16 @@
             "exclude": [],
             "models": {
                 "gpt-6.1-sol": {
-                    "label": "GPT-6.1 Sol (2/10 $)"
+                    "label": "GPT-6.1 Sol"
                 },
                 "gpt-6-astra": {
-                    "label": "GPT-6 Astra (flagship, 10/50 $)"
+                    "label": "GPT-6 Astra (flagship)"
                 },
                 "gpt-6-luna": {
-                    "label": "GPT-6 Luna (le moins cher, 0,10/0,50 $)"
+                    "label": "GPT-6 Luna (le moins cher)"
                 },
                 "gpt-4.1": {
-                    "label": "GPT-4.1 (legacy, sortie 8 $)"
+                    "label": "GPT-4.1 (legacy)"
                 }
             }
         },
@@ -228,7 +228,7 @@
                     "label": "GPT-4.1 nano (le moins cher)"
                 },
                 "deepseek/deepseek-v4-flash": {
-                    "label": "DeepSeek V4 Flash (0,09/0,18 $)"
+                    "label": "DeepSeek V4 Flash"
                 },
                 "deepseek/deepseek-v4-pro": {
                     "label": "DeepSeek V4 Pro"
@@ -249,15 +249,19 @@
             "exclude": [],
             "models": {
                 "sonar": {
-                    "label": "Sonar (web)"
+                    "label": "Sonar (web)",
+                    "status": "active"
                 },
                 "sonar-pro": {
-                    "label": "Sonar Pro (web)"
+                    "label": "Sonar Pro (web)",
+                    "status": "active"
                 },
                 "sonar-reasoning-pro": {
-                    "label": "Sonar Reasoning Pro"
+                    "label": "Sonar Reasoning Pro",
+                    "status": "active"
                 }
-            }
+            },
+            "_note": "models.dev marque sonar* comme obsolètes ; toujours utilisés par les plugins : statut forcé à active (décision du 2026-10-25)."
         },
         "copilot": {
             "pin": [],
