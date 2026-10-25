@@ -1,0 +1,268 @@
+{
+    "_doc": "Corrections manuelles appliquées après le filtrage. pin = toujours gardé (et marqué recommended). exclude = motifs fnmatch retirés. models = champs remplacés ; un id épinglé absent de models.dev est ajouté depuis ces champs (name et context requis).",
+    "providers": {
+        "gemini": {
+            "default_model": "gemini-3.1-flash-lite",
+            "free_tier": true,
+            "pin": [
+                "gemini-4-argon",
+                "gemini-3.8-flash",
+                "gemini-3.5-flash-lite",
+                "gemini-3.1-flash-lite"
+            ],
+            "exclude": [],
+            "models": {
+                "gemini-4-argon": {
+                    "label": "Gemini 4 Argon (flagship, payant)"
+                },
+                "gemini-3.8-flash": {
+                    "label": "Gemini 3.8 Flash",
+                    "free": true
+                },
+                "gemini-3.5-flash-lite": {
+                    "label": "Gemini 3.5 Flash-Lite",
+                    "free": true
+                },
+                "gemini-3.1-flash-lite": {
+                    "label": "Gemini 3.1 Flash-Lite (le moins cher, arrêt prévu mai 2027)",
+                    "free": true
+                }
+            }
+        },
+        "claude": {
+            "default_model": "claude-haiku-5-5",
+            "free_tier": false,
+            "pin": [
+                "claude-fable-5-1",
+                "claude-opus-5-5",
+                "claude-sonnet-5-5",
+                "claude-haiku-5-5",
+                "claude-sonnet-5",
+                "claude-opus-5"
+            ],
+            "exclude": [],
+            "models": {
+                "claude-fable-5-1": {
+                    "label": "Claude Fable 5.1"
+                },
+                "claude-opus-5-5": {
+                    "label": "Claude Opus 5.5"
+                },
+                "claude-sonnet-5-5": {
+                    "label": "Claude Sonnet 5.5"
+                },
+                "claude-haiku-5-5": {
+                    "label": "Claude Haiku 5.5"
+                },
+                "claude-sonnet-5": {
+                    "label": "Claude Sonnet 5"
+                },
+                "claude-opus-5": {
+                    "label": "Claude Opus 5"
+                }
+            }
+        },
+        "openai": {
+            "default_model": "gpt-6-luna",
+            "free_tier": false,
+            "pin": [
+                "gpt-6.1-sol",
+                "gpt-6-astra",
+                "gpt-6-luna",
+                "gpt-4.1"
+            ],
+            "exclude": [],
+            "models": {
+                "gpt-6.1-sol": {
+                    "label": "GPT-6.1 Sol (2/10 $)"
+                },
+                "gpt-6-astra": {
+                    "label": "GPT-6 Astra (flagship, 10/50 $)"
+                },
+                "gpt-6-luna": {
+                    "label": "GPT-6 Luna (le moins cher, 0,10/0,50 $)"
+                },
+                "gpt-4.1": {
+                    "label": "GPT-4.1 (legacy, sortie 8 $)"
+                }
+            }
+        },
+        "mistral": {
+            "default_model": "mistral-small-latest",
+            "free_tier": false,
+            "pin": [
+                "mistral-small-latest",
+                "mistral-medium-latest",
+                "ministral-8b-latest",
+                "magistral-small-latest",
+                "codestral-latest"
+            ],
+            "exclude": [],
+            "models": {
+                "mistral-small-latest": {
+                    "label": "Mistral Small"
+                },
+                "mistral-medium-latest": {
+                    "label": "Mistral Medium"
+                },
+                "ministral-8b-latest": {
+                    "label": "Ministral 8B"
+                },
+                "magistral-small-latest": {
+                    "label": "Magistral Small (raisonnement)",
+                    "name": "Magistral Small (raisonnement)",
+                    "context": 40000,
+                    "reasoning": true,
+                    "tools": true,
+                    "input": [
+                        "text"
+                    ]
+                },
+                "codestral-latest": {
+                    "label": "Codestral"
+                }
+            }
+        },
+        "groq": {
+            "default_model": "openai/gpt-oss-120b",
+            "free_tier": true,
+            "pin": [
+                "openai/gpt-oss-120b",
+                "openai/gpt-oss-20b",
+                "qwen/qwen3.8-27b"
+            ],
+            "exclude": [],
+            "models": {
+                "openai/gpt-oss-120b": {
+                    "label": "GPT-OSS 120B",
+                    "free": true
+                },
+                "openai/gpt-oss-20b": {
+                    "label": "GPT-OSS 20B",
+                    "free": true
+                },
+                "qwen/qwen3.8-27b": {
+                    "label": "Qwen 3.8 27B (raisonnement)",
+                    "free": true
+                }
+            }
+        },
+        "deepseek": {
+            "default_model": "deepseek-flash",
+            "free_tier": false,
+            "pin": [
+                "deepseek-flash",
+                "deepseek-v4-pro"
+            ],
+            "exclude": [],
+            "models": {
+                "deepseek-flash": {
+                    "label": "DeepSeek V4.1 Flash"
+                },
+                "deepseek-v4-pro": {
+                    "label": "DeepSeek V4 Pro (raisonnement)"
+                }
+            }
+        },
+        "xai": {
+            "default_model": "grok-4.3",
+            "free_tier": false,
+            "pin": [
+                "grok-4.7",
+                "grok-4.3"
+            ],
+            "exclude": [],
+            "models": {
+                "grok-4.7": {
+                    "label": "Grok 4.7"
+                },
+                "grok-4.3": {
+                    "label": "Grok 4.3 (moins cher, contexte 1M)"
+                }
+            }
+        },
+        "openrouter": {
+            "default_model": "anthropic/claude-haiku-5.5",
+            "free_tier": true,
+            "pin": [
+                "anthropic/claude-haiku-5.5",
+                "anthropic/claude-sonnet-5.5",
+                "anthropic/claude-opus-5.5",
+                "google/gemini-3.8-flash",
+                "google/gemini-3.1-flash-lite",
+                "google/gemini-4-argon",
+                "openai/gpt-6.1-sol",
+                "openai/gpt-6-luna",
+                "openai/gpt-4.1-nano",
+                "deepseek/deepseek-v4-flash",
+                "deepseek/deepseek-v4-pro",
+                "meta-llama/llama-4-maverick"
+            ],
+            "exclude": [],
+            "models": {
+                "anthropic/claude-haiku-5.5": {
+                    "label": "Claude Haiku 5.5"
+                },
+                "anthropic/claude-sonnet-5.5": {
+                    "label": "Claude Sonnet 5.5"
+                },
+                "anthropic/claude-opus-5.5": {
+                    "label": "Claude Opus 5.5"
+                },
+                "google/gemini-3.8-flash": {
+                    "label": "Gemini 3.8 Flash"
+                },
+                "google/gemini-3.1-flash-lite": {
+                    "label": "Gemini 3.1 Flash-Lite (le moins cher des Gemini)"
+                },
+                "google/gemini-4-argon": {
+                    "label": "Gemini 4 Argon"
+                },
+                "openai/gpt-6.1-sol": {
+                    "label": "GPT-6.1 Sol"
+                },
+                "openai/gpt-6-luna": {
+                    "label": "GPT-6 Luna"
+                },
+                "openai/gpt-4.1-nano": {
+                    "label": "GPT-4.1 nano (le moins cher)"
+                },
+                "deepseek/deepseek-v4-flash": {
+                    "label": "DeepSeek V4 Flash (0,09/0,18 $)"
+                },
+                "deepseek/deepseek-v4-pro": {
+                    "label": "DeepSeek V4 Pro"
+                },
+                "meta-llama/llama-4-maverick": {
+                    "label": "Llama 4 Maverick"
+                }
+            }
+        },
+        "perplexity": {
+            "default_model": "sonar",
+            "free_tier": false,
+            "pin": [
+                "sonar",
+                "sonar-pro",
+                "sonar-reasoning-pro"
+            ],
+            "exclude": [],
+            "models": {
+                "sonar": {
+                    "label": "Sonar (web)"
+                },
+                "sonar-pro": {
+                    "label": "Sonar Pro (web)"
+                },
+                "sonar-reasoning-pro": {
+                    "label": "Sonar Reasoning Pro"
+                }
+            }
+        },
+        "copilot": {
+            "pin": [],
+            "exclude": [],
+            "models": {}
+        }
+    }
+}

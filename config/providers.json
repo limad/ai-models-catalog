@@ -1,0 +1,23 @@
+{
+    "_doc": "Fournisseurs retenus dans catalog.json. Clé = identifiant côté plugins ; source = identifiant models.dev. per_family = nombre de dates de sortie gardées par famille (défaut 2). max_age_months = âge maximal d'un modèle non épinglé (défaut 18). vendors (OpenRouter) = préfixes d'identifiants acceptés.",
+    "defaults": {
+        "per_family": 2,
+        "max_age_months": 18
+    },
+    "providers": {
+        "claude": { "source": "anthropic", "label": "Anthropic Claude" },
+        "openai": { "source": "openai", "label": "OpenAI" },
+        "gemini": { "source": "google", "label": "Google Gemini" },
+        "mistral": { "source": "mistral", "label": "Mistral AI" },
+        "groq": { "source": "groq", "label": "Groq" },
+        "deepseek": { "source": "deepseek", "label": "DeepSeek" },
+        "xai": { "source": "xai", "label": "xAI (Grok)" },
+        "perplexity": { "source": "perplexity", "label": "Perplexity", "require_tools": false },
+        "copilot": { "source": "github-copilot", "label": "GitHub Copilot" },
+        "openrouter": {
+            "source": "openrouter",
+            "label": "OpenRouter",
+            "vendors": ["anthropic", "openai", "google", "mistralai", "deepseek", "x-ai", "qwen", "meta-llama", "moonshotai"]
+        }
+    }
+}
