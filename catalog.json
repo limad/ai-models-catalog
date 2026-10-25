@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "generated_at": "2026-10-25T13:32:30Z",
+  "generated_at": "2026-10-25T15:07:48Z",
   "source": {
     "name": "models.dev",
     "url": "https://models.dev/api.json",
@@ -239,7 +239,7 @@
             "cache_read": 0.1,
             "cache_write": 2.5
           },
-          "label": "GPT-6.1 Sol (2/10 $)",
+          "label": "GPT-6.1 Sol",
           "recommended": true
         },
         "gpt-6-sol": {
@@ -287,7 +287,7 @@
             "cache_read": 0.01,
             "cache_write": 0.125
           },
-          "label": "GPT-6 Luna (le moins cher, 0,10/0,50 $)",
+          "label": "GPT-6 Luna (le moins cher)",
           "recommended": true
         },
         "gpt-6-astra": {
@@ -312,7 +312,7 @@
             "cache_read": 1,
             "cache_write": 12.5
           },
-          "label": "GPT-6 Astra (flagship, 10/50 $)",
+          "label": "GPT-6 Astra (flagship)",
           "recommended": true
         },
         "gpt-daybreak-red-latest": {
@@ -615,7 +615,7 @@
             "out": 8,
             "cache_read": 0.5
           },
-          "label": "GPT-4.1 (legacy, sortie 8 $)",
+          "label": "GPT-4.1 (legacy)",
           "recommended": true
         }
       }
@@ -1280,7 +1280,7 @@
       "models": {
         "sonar-reasoning-pro": {
           "name": "Sonar Reasoning Pro",
-          "status": "deprecated",
+          "status": "active",
           "context": 128000,
           "input": [
             "text",
@@ -1301,7 +1301,7 @@
         },
         "sonar-pro": {
           "name": "Sonar Pro",
-          "status": "deprecated",
+          "status": "active",
           "context": 200000,
           "input": [
             "text",
@@ -1322,7 +1322,7 @@
         },
         "sonar": {
           "name": "Sonar",
-          "status": "deprecated",
+          "status": "active",
           "context": 128000,
           "input": [
             "text"
@@ -2058,75 +2058,6 @@
             "cache_read": 0.5
           }
         },
-        "openai/gpt-6-sol-pro": {
-          "name": "GPT-6 Sol Pro",
-          "status": "active",
-          "context": 1050000,
-          "input": [
-            "pdf",
-            "image",
-            "text"
-          ],
-          "tools": true,
-          "reasoning": true,
-          "origin": "models.dev",
-          "family": "gpt",
-          "release_date": "2026-09-22",
-          "output": 128000,
-          "structured_output": true,
-          "cost": {
-            "in": 2,
-            "out": 10,
-            "cache_read": 0.2,
-            "cache_write": 2.5
-          }
-        },
-        "openai/gpt-6-sol": {
-          "name": "GPT-6 Sol",
-          "status": "active",
-          "context": 1050000,
-          "input": [
-            "text",
-            "image",
-            "pdf"
-          ],
-          "tools": true,
-          "reasoning": true,
-          "origin": "models.dev",
-          "family": "gpt-sol",
-          "release_date": "2026-09-22",
-          "output": 128000,
-          "structured_output": true,
-          "cost": {
-            "in": 2,
-            "out": 10,
-            "cache_read": 0.2,
-            "cache_write": 2.5
-          }
-        },
-        "openai/gpt-6-luna-pro": {
-          "name": "GPT-6 Luna Pro",
-          "status": "active",
-          "context": 1050000,
-          "input": [
-            "pdf",
-            "image",
-            "text"
-          ],
-          "tools": true,
-          "reasoning": true,
-          "origin": "models.dev",
-          "family": "gpt",
-          "release_date": "2026-09-22",
-          "output": 128000,
-          "structured_output": true,
-          "cost": {
-            "in": 0.1,
-            "out": 0.5,
-            "cache_read": 0.01,
-            "cache_write": 0.125
-          }
-        },
         "openai/gpt-6-luna": {
           "name": "GPT-6 Luna",
           "status": "active",
@@ -2245,28 +2176,6 @@
             "cache_write": 12.5
           }
         },
-        "qwen/qwen3.8-max-0902": {
-          "name": "Qwen3.8 Max 0902",
-          "status": "active",
-          "context": 1000000,
-          "input": [
-            "text",
-            "image",
-            "video"
-          ],
-          "tools": true,
-          "reasoning": true,
-          "origin": "models.dev",
-          "family": "qwen",
-          "release_date": "2026-09-02",
-          "output": 131072,
-          "structured_output": true,
-          "cost": {
-            "in": 2,
-            "out": 6,
-            "cache_read": 0.25
-          }
-        },
         "google/gemini-3.8-flash": {
           "name": "Gemini 3.8 Flash",
           "status": "active",
@@ -2317,31 +2226,6 @@
             "cache_write": 12.5
           }
         },
-        "google/gemini-3.7-flash": {
-          "name": "Gemini 3.7 Flash",
-          "status": "active",
-          "context": 1048576,
-          "input": [
-            "text",
-            "image",
-            "video",
-            "audio",
-            "pdf"
-          ],
-          "tools": true,
-          "reasoning": true,
-          "origin": "models.dev",
-          "family": "gemini-flash",
-          "release_date": "2026-08-13",
-          "output": 65536,
-          "structured_output": true,
-          "cost": {
-            "in": 0.75,
-            "out": 3.75,
-            "cache_read": 0.075,
-            "cache_write": 0.041667
-          }
-        },
         "deepseek/deepseek-v4-pro": {
           "name": "DeepSeek V4 Pro",
           "status": "active",
@@ -2364,28 +2248,6 @@
           "label": "DeepSeek V4 Pro",
           "recommended": true
         },
-        "x-ai/grok-4.6": {
-          "name": "Grok 4.6",
-          "status": "active",
-          "context": 500000,
-          "input": [
-            "text",
-            "image",
-            "pdf"
-          ],
-          "tools": true,
-          "reasoning": true,
-          "origin": "models.dev",
-          "family": "grok",
-          "release_date": "2026-08-12",
-          "output": 450000,
-          "structured_output": true,
-          "cost": {
-            "in": 2,
-            "out": 6,
-            "cache_read": 0.5
-          }
-        },
         "deepseek/deepseek-v4-flash": {
           "name": "DeepSeek V4 Flash",
           "status": "active",
@@ -2405,31 +2267,8 @@
             "out": 0.182,
             "cache_read": 0.0182
           },
-          "label": "DeepSeek V4 Flash (0,09/0,18 $)",
+          "label": "DeepSeek V4 Flash",
           "recommended": true
-        },
-        "anthropic/claude-opus-5": {
-          "name": "Claude Opus 5",
-          "status": "active",
-          "context": 1000000,
-          "input": [
-            "text",
-            "image",
-            "pdf"
-          ],
-          "tools": true,
-          "reasoning": true,
-          "origin": "models.dev",
-          "family": "claude-opus",
-          "release_date": "2026-07-24",
-          "output": 128000,
-          "structured_output": true,
-          "cost": {
-            "in": 5,
-            "out": 25,
-            "cache_read": 0.5,
-            "cache_write": 6.25
-          }
         },
         "google/gemini-3.5-flash-lite": {
           "name": "Gemini 3.5 Flash Lite",
@@ -2454,28 +2293,6 @@
             "out": 2.5,
             "cache_read": 0.03,
             "cache_write": 0.083333
-          }
-        },
-        "moonshotai/kimi-k3": {
-          "name": "Kimi K3",
-          "status": "active",
-          "context": 1048576,
-          "input": [
-            "text",
-            "image",
-            "video"
-          ],
-          "tools": true,
-          "reasoning": true,
-          "origin": "models.dev",
-          "family": "kimi-k3",
-          "release_date": "2026-07-16",
-          "output": 943718,
-          "structured_output": true,
-          "cost": {
-            "in": 0.239,
-            "out": 10.8,
-            "cache_read": 0.21
           }
         },
         "openai/gpt-5.6-terra-pro": {
@@ -2524,75 +2341,6 @@
             "cache_write": 2.5
           }
         },
-        "openai/gpt-5.6-luna-pro": {
-          "name": "GPT-5.6 Luna Pro",
-          "status": "active",
-          "context": 1050000,
-          "input": [
-            "text",
-            "image",
-            "pdf"
-          ],
-          "tools": true,
-          "reasoning": true,
-          "origin": "models.dev",
-          "family": "gpt-luna",
-          "release_date": "2026-07-09",
-          "output": 128000,
-          "structured_output": true,
-          "cost": {
-            "in": 0.2,
-            "out": 1.2,
-            "cache_read": 0.02,
-            "cache_write": 0.25
-          }
-        },
-        "openai/gpt-5.6-luna": {
-          "name": "GPT-5.6 Luna",
-          "status": "active",
-          "context": 1050000,
-          "input": [
-            "text",
-            "image",
-            "pdf"
-          ],
-          "tools": true,
-          "reasoning": true,
-          "origin": "models.dev",
-          "family": "gpt-luna",
-          "release_date": "2026-07-09",
-          "output": 128000,
-          "structured_output": true,
-          "cost": {
-            "in": 0.2,
-            "out": 1.2,
-            "cache_read": 0.02,
-            "cache_write": 0.25
-          }
-        },
-        "anthropic/claude-sonnet-5": {
-          "name": "Claude Sonnet 5",
-          "status": "active",
-          "context": 1000000,
-          "input": [
-            "text",
-            "image",
-            "pdf"
-          ],
-          "tools": true,
-          "reasoning": true,
-          "origin": "models.dev",
-          "family": "claude-sonnet",
-          "release_date": "2026-06-30",
-          "output": 128000,
-          "structured_output": true,
-          "cost": {
-            "in": 2,
-            "out": 10,
-            "cache_read": 0.2,
-            "cache_write": 2.5
-          }
-        },
         "moonshotai/kimi-k2.7-code": {
           "name": "Kimi K2.7 Code",
           "status": "active",
@@ -2612,29 +2360,6 @@
             "in": 0.6712,
             "out": 3.35,
             "cache_read": 0.15
-          }
-        },
-        "anthropic/claude-fable-5": {
-          "name": "Claude Fable 5",
-          "status": "active",
-          "context": 1000000,
-          "input": [
-            "text",
-            "image",
-            "pdf"
-          ],
-          "tools": true,
-          "reasoning": true,
-          "origin": "models.dev",
-          "family": "claude-fable",
-          "release_date": "2026-06-09",
-          "output": 128000,
-          "structured_output": true,
-          "cost": {
-            "in": 10,
-            "out": 50,
-            "cache_read": 1,
-            "cache_write": 12.5
           }
         },
         "google/gemini-3.1-flash-lite": {
@@ -2748,27 +2473,6 @@
           "cost": {
             "in": 30,
             "out": 180
-          }
-        },
-        "moonshotai/kimi-k2.6": {
-          "name": "Kimi K2.6",
-          "status": "active",
-          "context": 262144,
-          "input": [
-            "text",
-            "image"
-          ],
-          "tools": true,
-          "reasoning": true,
-          "origin": "models.dev",
-          "family": "kimi-k2",
-          "release_date": "2026-04-20",
-          "output": 235929,
-          "structured_output": true,
-          "cost": {
-            "in": 0.65,
-            "out": 3.41,
-            "cache_read": 0.15
           }
         },
         "x-ai/grok-build-0.1": {
@@ -2945,27 +2649,6 @@
             "cache_read": 0.015
           }
         },
-        "openai/gpt-5.4-pro": {
-          "name": "GPT-5.4 Pro",
-          "status": "active",
-          "context": 1050000,
-          "input": [
-            "text",
-            "image",
-            "pdf"
-          ],
-          "tools": true,
-          "reasoning": true,
-          "origin": "models.dev",
-          "family": "gpt-pro",
-          "release_date": "2026-03-05",
-          "output": 128000,
-          "structured_output": true,
-          "cost": {
-            "in": 30,
-            "out": 180
-          }
-        },
         "google/gemini-3.1-pro-preview": {
           "name": "Gemini 3.1 Pro Preview",
           "status": "active",
@@ -3013,27 +2696,6 @@
             "cache_read": 0.175
           }
         },
-        "openai/gpt-5.2-codex": {
-          "name": "GPT-5.2 Codex",
-          "status": "active",
-          "context": 400000,
-          "input": [
-            "text",
-            "image"
-          ],
-          "tools": true,
-          "reasoning": true,
-          "origin": "models.dev",
-          "family": "gpt-codex",
-          "release_date": "2025-12-11",
-          "output": 128000,
-          "structured_output": true,
-          "cost": {
-            "in": 1.75,
-            "out": 14,
-            "cache_read": 0.175
-          }
-        },
         "mistralai/devstral-2512": {
           "name": "Devstral 2",
           "status": "active",
@@ -3053,27 +2715,6 @@
             "in": 0.4,
             "out": 2,
             "cache_read": 0.04
-          }
-        },
-        "mistralai/mistral-large": {
-          "name": "Mistral Large",
-          "status": "active",
-          "context": 128000,
-          "input": [
-            "text",
-            "pdf"
-          ],
-          "tools": true,
-          "reasoning": false,
-          "origin": "models.dev",
-          "family": "mistral-large",
-          "release_date": "2024-02-26",
-          "output": 102400,
-          "structured_output": true,
-          "cost": {
-            "in": 2,
-            "out": 6,
-            "cache_read": 0.2
           }
         },
         "mistralai/ministral-8b-2512": {
@@ -3198,114 +2839,6 @@
             "cache_read": 0.15
           }
         },
-        "anthropic/claude-haiku-4.5": {
-          "name": "Claude Haiku 4.5 (latest)",
-          "status": "active",
-          "context": 200000,
-          "input": [
-            "text",
-            "image",
-            "pdf"
-          ],
-          "tools": true,
-          "reasoning": true,
-          "origin": "models.dev",
-          "family": "claude-haiku",
-          "release_date": "2025-10-15",
-          "output": 64000,
-          "structured_output": true,
-          "cost": {
-            "in": 1,
-            "out": 5,
-            "cache_read": 0.1,
-            "cache_write": 1.25
-          }
-        },
-        "deepseek/deepseek-v3.1-terminus": {
-          "name": "DeepSeek V3.1 Terminus",
-          "status": "active",
-          "context": 163840,
-          "input": [
-            "text"
-          ],
-          "tools": true,
-          "reasoning": true,
-          "origin": "models.dev",
-          "family": "deepseek",
-          "release_date": "2025-09-22",
-          "output": 147456,
-          "structured_output": true,
-          "cost": {
-            "in": 0.27,
-            "out": 1
-          }
-        },
-        "mistralai/mistral-medium-3.1": {
-          "name": "Mistral Medium 3.1",
-          "status": "active",
-          "context": 131072,
-          "input": [
-            "text",
-            "image",
-            "pdf"
-          ],
-          "tools": true,
-          "reasoning": false,
-          "origin": "models.dev",
-          "family": "mistral-medium",
-          "release_date": "2025-08-12",
-          "output": 104857,
-          "structured_output": true,
-          "cost": {
-            "in": 0.4,
-            "out": 2,
-            "cache_read": 0.04
-          }
-        },
-        "openai/gpt-5-nano": {
-          "name": "GPT-5 Nano",
-          "status": "active",
-          "context": 400000,
-          "input": [
-            "text",
-            "image",
-            "pdf"
-          ],
-          "tools": true,
-          "reasoning": true,
-          "origin": "models.dev",
-          "family": "gpt-nano",
-          "release_date": "2025-08-07",
-          "output": 128000,
-          "structured_output": true,
-          "cost": {
-            "in": 0.05,
-            "out": 0.4,
-            "cache_read": 0.005
-          }
-        },
-        "openai/gpt-5-mini": {
-          "name": "GPT-5 Mini",
-          "status": "active",
-          "context": 400000,
-          "input": [
-            "text",
-            "image",
-            "pdf"
-          ],
-          "tools": true,
-          "reasoning": true,
-          "origin": "models.dev",
-          "family": "gpt-mini",
-          "release_date": "2025-08-07",
-          "output": 128000,
-          "structured_output": true,
-          "cost": {
-            "in": 0.25,
-            "out": 2,
-            "cache_read": 0.025
-          }
-        },
         "openai/gpt-oss-20b": {
           "name": "GPT OSS 20B",
           "status": "active",
@@ -3367,26 +2900,6 @@
             "cache_read": 0.03
           }
         },
-        "mistralai/mistral-small-3.2-24b-instruct": {
-          "name": "Mistral Small 3.2 24B",
-          "status": "active",
-          "context": 256000,
-          "input": [
-            "image",
-            "text"
-          ],
-          "tools": true,
-          "reasoning": false,
-          "origin": "models.dev",
-          "family": "mistral-small",
-          "release_date": "2025-06-20",
-          "output": 16384,
-          "structured_output": true,
-          "cost": {
-            "in": 0.075,
-            "out": 0.2
-          }
-        },
         "openai/o3-pro": {
           "name": "o3-pro",
           "status": "active",
@@ -3406,50 +2919,6 @@
           "cost": {
             "in": 20,
             "out": 80
-          }
-        },
-        "google/gemini-2.5-pro-preview": {
-          "name": "Gemini 2.5 Pro Preview 06-05",
-          "status": "active",
-          "context": 1048576,
-          "input": [
-            "pdf",
-            "image",
-            "text",
-            "audio"
-          ],
-          "tools": true,
-          "reasoning": true,
-          "origin": "models.dev",
-          "family": "gemini",
-          "release_date": "2025-06-05",
-          "output": 65536,
-          "structured_output": true,
-          "cost": {
-            "in": 1.25,
-            "out": 10,
-            "cache_read": 0.125,
-            "cache_write": 0.375
-          }
-        },
-        "deepseek/deepseek-r1-0528": {
-          "name": "DeepSeek R1 0528",
-          "status": "active",
-          "context": 163840,
-          "input": [
-            "text"
-          ],
-          "tools": true,
-          "reasoning": true,
-          "origin": "models.dev",
-          "family": "deepseek-thinking",
-          "release_date": "2025-05-28",
-          "output": 32768,
-          "structured_output": true,
-          "cost": {
-            "in": 0.5,
-            "out": 2.15,
-            "cache_read": 0.35
           }
         },
         "openai/gpt-4.1-nano": {

@@ -17,6 +17,7 @@
         "openrouter": {
             "source": "openrouter",
             "label": "OpenRouter",
+            "per_family": 1,
             "vendors": ["anthropic", "openai", "google", "mistralai", "deepseek", "x-ai", "qwen", "meta-llama", "moonshotai"]
         }
     }
