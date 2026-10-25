@@ -1,0 +1,49 @@
+name: build-catalog
+
+on:
+  schedule:
+    - cron: "17 3 * * 1" # chaque lundi, 03:17 UTC
+  workflow_dispatch:
+  pull_request:
+  push:
+    branches: [main]
+    paths: ["config/**", "scripts/**", "schema/**", ".github/workflows/**"]
+
+permissions:
+  contents: write
+
+concurrency:
+  group: build-catalog
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Génère catalog.json depuis models.dev
+        run: python scripts/build.py
+
+      - name: Valide le schéma
+        run: pipx run check-jsonschema --schemafile schema/catalog.schema.json catalog.json
+
+      - name: Vérifie l'empreinte
+        run: sha256sum -c catalog.json.sha256
+
+      - name: Publie le catalogue
+        if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main'
+        run: |
+          if git diff --quiet -- catalog.json catalog.json.sha256; then
+            echo "Aucun changement."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add catalog.json catalog.json.sha256
+          git commit -m "chore(catalog): régénère depuis models.dev"
+          git push
