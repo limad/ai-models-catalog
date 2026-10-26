@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "generated_at": "2026-10-25T15:07:48Z",
+  "generated_at": "2026-10-26T08:53:56Z",
   "source": {
     "name": "models.dev",
     "url": "https://models.dev/api.json",
@@ -2241,9 +2241,9 @@
           "output": 384000,
           "structured_output": true,
           "cost": {
-            "in": 0.2088,
-            "out": 0.4176,
-            "cache_read": 0.0174
+            "in": 0.95526,
+            "out": 1.91052,
+            "cache_read": 0.079605
           },
           "label": "DeepSeek V4 Pro",
           "recommended": true
@@ -2533,11 +2533,12 @@
           "origin": "models.dev",
           "family": "gemma",
           "release_date": "2026-04-02",
-          "output": 16384,
+          "output": 235929,
           "structured_output": true,
           "cost": {
-            "in": 0.2,
-            "out": 0.4
+            "in": 0.1,
+            "out": 0.34,
+            "cache_read": 0.1
           }
         },
         "google/gemma-4-26b-a4b-it:free": {
@@ -2579,9 +2580,9 @@
           "output": 235929,
           "structured_output": true,
           "cost": {
-            "in": 0.0675,
-            "out": 0.225,
-            "cache_read": 0.0375
+            "in": 0.09,
+            "out": 0.3,
+            "cache_read": 0.05
           }
         },
         "openai/gpt-5.4-nano": {
@@ -2935,12 +2936,12 @@
           "origin": "models.dev",
           "family": "gpt-nano",
           "release_date": "2025-04-14",
-          "output": 32768,
+          "output": 942818,
           "structured_output": true,
           "cost": {
             "in": 0.1,
             "out": 0.4,
-            "cache_read": 0.025
+            "cache_read": 0.03
           },
           "label": "GPT-4.1 nano (le moins cher)",
           "recommended": true
