@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "generated_at": "2026-11-09T11:29:33Z",
+  "generated_at": "2026-11-15T01:24:10Z",
   "source": {
     "name": "models.dev",
     "url": "https://models.dev/api.json",
@@ -13,6 +13,29 @@
       "default_model": "claude-haiku-5-5",
       "free_tier": false,
       "models": {
+        "claude-fable-5-2": {
+          "name": "Claude Fable 5.2",
+          "status": "active",
+          "context": 1000000,
+          "input": [
+            "text",
+            "image",
+            "pdf"
+          ],
+          "tools": true,
+          "reasoning": true,
+          "origin": "models.dev",
+          "family": "claude-fable",
+          "release_date": "2026-11-09",
+          "output": 128000,
+          "structured_output": true,
+          "cost": {
+            "in": 8,
+            "out": 40,
+            "cache_read": 0.2,
+            "cache_write": 10
+          }
+        },
         "claude-haiku-5-5": {
           "name": "Claude Haiku 5.5",
           "status": "active",
@@ -162,29 +185,6 @@
           },
           "label": "Claude Sonnet 5",
           "recommended": true
-        },
-        "claude-fable-5": {
-          "name": "Claude Fable 5",
-          "status": "active",
-          "context": 1000000,
-          "input": [
-            "text",
-            "image",
-            "pdf"
-          ],
-          "tools": true,
-          "reasoning": true,
-          "origin": "models.dev",
-          "family": "claude-fable",
-          "release_date": "2026-06-07",
-          "output": 128000,
-          "structured_output": true,
-          "cost": {
-            "in": 10,
-            "out": 50,
-            "cache_read": 1,
-            "cache_write": 12.5
-          }
         },
         "claude-haiku-4-5": {
           "name": "Claude Haiku 4.5 (latest)",
@@ -649,6 +649,57 @@
       "default_model": "gemini-3.1-flash-lite",
       "free_tier": true,
       "models": {
+        "gemini-4-hydrogen": {
+          "name": "Gemini 4 Hydrogen",
+          "status": "active",
+          "context": 1048576,
+          "input": [
+            "text",
+            "image",
+            "video",
+            "audio",
+            "pdf"
+          ],
+          "tools": true,
+          "reasoning": true,
+          "origin": "models.dev",
+          "family": "gemini",
+          "release_date": "2026-11-12",
+          "output": 65536,
+          "structured_output": true,
+          "cost": {
+            "in": 1.5,
+            "out": 7.5,
+            "cache_read": 0.075
+          },
+          "label": "Gemini 4 Hydrogen (successeur de 3.8 Flash)",
+          "free": true,
+          "recommended": true
+        },
+        "gemini-4-carbon": {
+          "name": "Gemini 4 Carbon",
+          "status": "active",
+          "context": 1048576,
+          "input": [
+            "text",
+            "image",
+            "video",
+            "audio",
+            "pdf"
+          ],
+          "tools": true,
+          "reasoning": true,
+          "origin": "models.dev",
+          "family": "gemini",
+          "release_date": "2026-11-10",
+          "output": 32768,
+          "structured_output": true,
+          "cost": {
+            "in": 2,
+            "out": 10,
+            "cache_read": 0.1
+          }
+        },
         "gemini-4-argon": {
           "name": "Gemini 4 Argon",
           "status": "active",
@@ -794,7 +845,12 @@
           "family": "gemma",
           "release_date": "2026-04-02",
           "output": 32768,
-          "structured_output": true
+          "structured_output": true,
+          "cost": {
+            "in": 0,
+            "out": 0
+          },
+          "free": true
         },
         "gemma-4-26b-a4b-it": {
           "name": "Gemma 4 26B A4B IT",
@@ -810,7 +866,12 @@
           "family": "gemma",
           "release_date": "2026-04-02",
           "output": 32768,
-          "structured_output": true
+          "structured_output": true,
+          "cost": {
+            "in": 0,
+            "out": 0
+          },
+          "free": true
         },
         "gemini-3.1-pro-preview": {
           "name": "Gemini 3.1 Pro Preview",
@@ -873,7 +934,8 @@
           "status": "active",
           "context": 1048576,
           "input": [
-            "text"
+            "text",
+            "image"
           ],
           "tools": true,
           "reasoning": true,
@@ -1411,6 +1473,73 @@
       "label": "GitHub Copilot",
       "source_id": "github-copilot",
       "models": {
+        "gemini-4-hydrogen": {
+          "name": "Gemini 4 Hydrogen",
+          "status": "active",
+          "context": 1048576,
+          "input": [
+            "text",
+            "image",
+            "pdf"
+          ],
+          "tools": true,
+          "reasoning": true,
+          "origin": "models.dev",
+          "family": "gemini",
+          "release_date": "2026-11-12",
+          "output": 65536,
+          "structured_output": true,
+          "cost": {
+            "in": 1.5,
+            "out": 7.5,
+            "cache_read": 0.075
+          }
+        },
+        "gemini-4-carbon": {
+          "name": "Gemini 4 Carbon",
+          "status": "active",
+          "context": 1048576,
+          "input": [
+            "text",
+            "image",
+            "pdf"
+          ],
+          "tools": true,
+          "reasoning": true,
+          "origin": "models.dev",
+          "family": "gemini",
+          "release_date": "2026-11-10",
+          "output": 65536,
+          "structured_output": true,
+          "cost": {
+            "in": 2,
+            "out": 10,
+            "cache_read": 0.1
+          }
+        },
+        "claude-fable-5.2": {
+          "name": "Claude Fable 5.2",
+          "status": "active",
+          "context": 1000000,
+          "input": [
+            "text",
+            "image",
+            "pdf"
+          ],
+          "tools": true,
+          "reasoning": true,
+          "origin": "models.dev",
+          "family": "claude-fable",
+          "release_date": "2026-11-09",
+          "output": 128000,
+          "structured_output": true,
+          "cost": {
+            "in": 8,
+            "out": 40,
+            "cache_read": 0.2,
+            "cache_write": 10
+          }
+        },
         "gpt-6.1-terra": {
           "name": "GPT-6.1 Terra",
           "status": "active",
@@ -1432,28 +1561,6 @@
             "out": 5,
             "cache_read": 0.05,
             "cache_write": 1.25
-          }
-        },
-        "gemini-4-argon": {
-          "name": "Gemini 4 Argon",
-          "status": "active",
-          "context": 1048576,
-          "input": [
-            "text",
-            "image",
-            "pdf"
-          ],
-          "tools": true,
-          "reasoning": true,
-          "origin": "models.dev",
-          "family": "gemini",
-          "release_date": "2026-10-13",
-          "output": 65536,
-          "structured_output": true,
-          "cost": {
-            "in": 2,
-            "out": 10,
-            "cache_read": 0.1
           }
         },
         "claude-haiku-5.5": {
@@ -1762,7 +1869,7 @@
           "origin": "models.dev",
           "family": "kimi-k3",
           "release_date": "2026-07-16",
-          "output": 131072,
+          "output": 1048576,
           "structured_output": true,
           "cost": {
             "in": 3,
@@ -1839,29 +1946,6 @@
             "cache_write": 2.5
           }
         },
-        "claude-fable-5": {
-          "name": "Claude Fable 5",
-          "status": "active",
-          "context": 1000000,
-          "input": [
-            "text",
-            "image",
-            "pdf"
-          ],
-          "tools": true,
-          "reasoning": true,
-          "origin": "models.dev",
-          "family": "claude-fable",
-          "release_date": "2026-06-09",
-          "output": 128000,
-          "structured_output": true,
-          "cost": {
-            "in": 10,
-            "out": 50,
-            "cache_read": 1,
-            "cache_write": 12.5
-          }
-        },
         "gpt-5.4-nano": {
           "name": "GPT-5.4 nano",
           "status": "active",
@@ -1935,6 +2019,54 @@
       "default_model": "anthropic/claude-haiku-5.5",
       "free_tier": true,
       "models": {
+        "google/gemini-4-hydrogen": {
+          "name": "Gemini 4 Hydrogen",
+          "status": "active",
+          "context": 1048576,
+          "input": [
+            "text",
+            "image",
+            "video",
+            "audio",
+            "pdf"
+          ],
+          "tools": true,
+          "reasoning": true,
+          "origin": "models.dev",
+          "family": "gemini",
+          "release_date": "2026-11-12",
+          "output": 943718,
+          "structured_output": true,
+          "cost": {
+            "in": 1.5,
+            "out": 7.5,
+            "cache_read": 0.075,
+            "cache_write": 0.083333
+          }
+        },
+        "anthropic/claude-fable-5.2": {
+          "name": "Claude Fable 5.2",
+          "status": "active",
+          "context": 1000000,
+          "input": [
+            "text",
+            "image",
+            "pdf"
+          ],
+          "tools": true,
+          "reasoning": true,
+          "origin": "models.dev",
+          "family": "claude-fable",
+          "release_date": "2026-11-09",
+          "output": 128000,
+          "structured_output": true,
+          "cost": {
+            "in": 8,
+            "out": 40,
+            "cache_read": 0.2,
+            "cache_write": 10
+          }
+        },
         "openai/gpt-6.1-terra-pro": {
           "name": "GPT-6.1 Terra Pro",
           "status": "active",
@@ -2019,9 +2151,9 @@
           "output": 943718,
           "structured_output": true,
           "cost": {
-            "in": 0.051,
-            "out": 0.567,
-            "cache_read": 0.018
+            "in": 0.3,
+            "out": 1.2,
+            "cache_read": 0.006
           }
         },
         "google/gemini-4-argon": {
@@ -2314,29 +2446,6 @@
           "label": "Gemini 3.8 Flash",
           "recommended": true
         },
-        "anthropic/claude-fable-5.1": {
-          "name": "Claude Fable 5.1",
-          "status": "active",
-          "context": 1000000,
-          "input": [
-            "text",
-            "image",
-            "pdf"
-          ],
-          "tools": true,
-          "reasoning": true,
-          "origin": "models.dev",
-          "family": "claude-fable",
-          "release_date": "2026-09-01",
-          "output": 128000,
-          "structured_output": true,
-          "cost": {
-            "in": 10,
-            "out": 50,
-            "cache_read": 0.25,
-            "cache_write": 12.5
-          }
-        },
         "deepseek/deepseek-v4-pro": {
           "name": "DeepSeek V4 Pro",
           "status": "active",
@@ -2349,12 +2458,12 @@
           "origin": "models.dev",
           "family": "deepseek-thinking",
           "release_date": "2026-04-24",
-          "output": 384000,
+          "output": 393216,
           "structured_output": true,
           "cost": {
-            "in": 0.95526,
-            "out": 1.91052,
-            "cache_read": 0.079605
+            "in": 0.9,
+            "out": 1.5,
+            "cache_read": 0.25
           },
           "label": "DeepSeek V4 Pro",
           "recommended": true
@@ -2371,12 +2480,12 @@
           "origin": "models.dev",
           "family": "deepseek-flash",
           "release_date": "2026-04-24",
-          "output": 943717,
+          "output": 393216,
           "structured_output": true,
           "cost": {
-            "in": 0.091,
-            "out": 0.182,
-            "cache_read": 0.0182
+            "in": 0.09,
+            "out": 0.18,
+            "cache_read": 0.018
           },
           "label": "DeepSeek V4 Flash",
           "recommended": true
@@ -2916,12 +3025,12 @@
           "origin": "models.dev",
           "family": "gpt-oss",
           "release_date": "2025-08-05",
-          "output": 32768,
+          "output": 117964,
           "structured_output": true,
           "cost": {
-            "in": 0.018,
-            "out": 0.09,
-            "cache_read": 0.009
+            "in": 0.03,
+            "out": 0.13,
+            "cache_read": 0.03
           }
         },
         "openai/gpt-oss-120b": {
