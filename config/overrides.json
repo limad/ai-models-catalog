@@ -6,6 +6,7 @@
             "free_tier": true,
             "pin": [
                 "gemini-4-argon",
+                "gemini-4-hydrogen",
                 "gemini-3.8-flash",
                 "gemini-3.5-flash-lite",
                 "gemini-3.1-flash-lite"
@@ -14,6 +15,10 @@
             "models": {
                 "gemini-4-argon": {
                     "label": "Gemini 4 Argon (flagship, payant)"
+                },
+                "gemini-4-hydrogen": {
+                    "label": "Gemini 4 Hydrogen (successeur de 3.8 Flash)",
+                    "free": true
                 },
                 "gemini-3.8-flash": {
                     "label": "Gemini 3.8 Flash",
