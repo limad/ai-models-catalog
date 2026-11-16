@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "generated_at": "2026-11-15T01:24:10Z",
+  "generated_at": "2026-11-16T11:15:29Z",
   "source": {
     "name": "models.dev",
     "url": "https://models.dev/api.json",
@@ -2019,6 +2019,29 @@
       "default_model": "anthropic/claude-haiku-5.5",
       "free_tier": true,
       "models": {
+        "qwen/qwen4-max": {
+          "name": "Qwen4 Max",
+          "status": "active",
+          "context": 1000000,
+          "input": [
+            "text",
+            "image",
+            "video"
+          ],
+          "tools": true,
+          "reasoning": true,
+          "origin": "models.dev",
+          "family": "qwen",
+          "release_date": "2026-11-16",
+          "output": 393216,
+          "structured_output": true,
+          "cost": {
+            "in": 1.5,
+            "out": 4.5,
+            "cache_read": 0.075,
+            "cache_write": 1.875
+          }
+        },
         "google/gemini-4-hydrogen": {
           "name": "Gemini 4 Hydrogen",
           "status": "active",
@@ -2130,8 +2153,8 @@
           "output": 943718,
           "structured_output": true,
           "cost": {
-            "in": 2,
-            "out": 10,
+            "in": 0.2403,
+            "out": 8.4023,
             "cache_read": 0.2
           }
         },
@@ -2148,12 +2171,12 @@
           "origin": "models.dev",
           "family": "deepseek-flash",
           "release_date": "2026-09-10",
-          "output": 943718,
+          "output": 393216,
           "structured_output": true,
           "cost": {
-            "in": 0.3,
-            "out": 1.2,
-            "cache_read": 0.006
+            "in": 0.14,
+            "out": 0.42,
+            "cache_read": 0.0042
           }
         },
         "google/gemini-4-argon": {
@@ -2371,29 +2394,6 @@
             "in": 2,
             "out": 6,
             "cache_read": 0.5
-          }
-        },
-        "qwen/qwen3.8-omni-flash": {
-          "name": "Qwen3.8 Omni Flash",
-          "status": "active",
-          "context": 1000000,
-          "input": [
-            "text",
-            "image",
-            "audio",
-            "video"
-          ],
-          "tools": true,
-          "reasoning": true,
-          "origin": "models.dev",
-          "family": "qwen",
-          "release_date": "2026-09-17",
-          "output": 131072,
-          "structured_output": true,
-          "cost": {
-            "in": 0.15,
-            "out": 0.47,
-            "cache_read": 0.016
           }
         },
         "openai/gpt-6-astra": {
@@ -2986,11 +2986,11 @@
           "origin": "models.dev",
           "family": "deepseek",
           "release_date": "2025-12-01",
-          "output": 16384,
+          "output": 16000,
           "structured_output": true,
           "cost": {
-            "in": 0.32,
-            "out": 0.89
+            "in": 0.2574,
+            "out": 1.0287
           }
         },
         "moonshotai/kimi-k2-thinking": {
@@ -3025,12 +3025,12 @@
           "origin": "models.dev",
           "family": "gpt-oss",
           "release_date": "2025-08-05",
-          "output": 117964,
+          "output": 65536,
           "structured_output": true,
           "cost": {
-            "in": 0.03,
-            "out": 0.13,
-            "cache_read": 0.03
+            "in": 0.075,
+            "out": 0.3,
+            "cache_read": 0.0375
           }
         },
         "openai/gpt-oss-120b": {
