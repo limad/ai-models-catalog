@@ -25,10 +25,11 @@ MAX_DROP_RATIO = 0.30  # garde-fou : part maximale de modèles qui peuvent dispa
 ID_RE = re.compile(r"^[A-Za-z0-9._:/-]{1,128}$")
 NON_CHAT_TYPES = {"embedding", "image", "video", "speech", "transcription", "reranking", "realtime"}
 # Modèles spécialisés que models.dev ne marque pas toujours par « type ».
+# healthcare, daybreak, -cyber : variantes OpenAI santé et cyber (Daybreak Red = gpt-5.6-cyber, sur approbation).
 NAME_DENY = re.compile(
     r"(embed|whisper|tts|transcri|realtime|-live-|live-preview|computer-use|deep-research|customtools"
     r"|prompt-guard|safeguard|moderation|rerank|-image|image-|lyria|orpheus|voxtral|multi-agent"
-    r"|audio|-exp$|-exp-)",
+    r"|audio|-exp$|-exp-|healthcare|daybreak|-cyber)",
     re.I,
 )
 # Snapshot daté ou numéroté en fin d'id : -20251101, -2024-11-20, -2603.
@@ -97,15 +98,18 @@ def dedupe(kept, pins, dropped):
                     a["_date"] = max(a["_date"], m["_date"])
                     dropped[mid] = "snapshot de " + alias
                     break
-            if mid in dropped:
-                continue
-        if mid.endswith("-latest"):
-            for oid, o in kept.items():
-                if (oid != mid and not oid.endswith("-latest") and oid not in dropped
-                        and o.get("family") == m.get("family")
-                        and o["_date"] == m["_date"]):
-                    dropped[mid] = "alias de " + oid
-                    break
+    # Second passage, une fois tous les snapshots retirés : un alias ne doit pas tomber sur un
+    # snapshot qui tombe à son tour (ministral-14b-latest et ministral-8b-2512 disparaissaient tous deux).
+    for mid in sorted(kept):
+        if mid in pins or mid in dropped or not mid.endswith("-latest"):
+            continue
+        m = kept[mid]
+        for oid, o in kept.items():
+            if (oid != mid and not oid.endswith("-latest") and oid not in dropped
+                    and o.get("family") == m.get("family")
+                    and o["_date"] == m["_date"]):
+                dropped[mid] = "alias de " + oid
+                break
     for mid in dropped:
         kept.pop(mid, None)
 
